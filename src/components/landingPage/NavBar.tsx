@@ -2,8 +2,8 @@ import React from "react";
 
 const NavBar: React.FC = () => {
 	return (
-		<nav className='bg-[#774936] border-gray-200 h-28 py-6 text-white'>
-			<div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
+		<nav className=' z-50 bg-[#774936] border-gray-200 h-20 md:h-24 py-2 md:py-4 text-white'>
+			<div className=' relative z-50 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
 				<a
 					href='https://flowbite.com/'
 					className='flex items-center space-x-3 rtl:space-x-reverse'>
@@ -155,7 +155,7 @@ const NavBar: React.FC = () => {
 							{/* Dropdown menu */}
 							<div
 								id='dropdownNavbar'
-								className='z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 '>
+								className='z-10 hidden font-normal bg-red-500 divide-y divide-gray-100 rounded-lg shadow w-44 '>
 								<ul
 									className='py-2 text-sm text-gray-700 '
 									aria-labelledby='dropdownLargeButton'>

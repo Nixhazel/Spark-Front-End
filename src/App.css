@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&family=Yeseva+One&display=swap");
+
 #root {
-  /* max-width: 1280px; */
-  margin: 0 auto;
-  /* padding: 2rem; */
-  /* text-align: center; */
+	/* max-width: 1280px; */
+	margin: 0 auto;
+	/* padding: 2rem; */
+	/* text-align: center; */
 }
 
-
+.carousetext {
+	font-family: "Rubik", sans-serif;
+	font-family: "Yeseva One", serif;
+}
