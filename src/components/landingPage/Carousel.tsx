@@ -9,7 +9,7 @@ const Carousel: React.FC = () => {
 			className='relative w-full'
 			data-carousel='slide'>
 			{/* <!-- Carousel wrapper --> */}
-			<div className='z-10  relative h-56 overflow-hidden rounded-lg md:h-96'>
+			<div className='z-10  relative h-56 overflow-hidden  md:h-96'>
 				{/* <!-- Item 1 --> */}
 				<div className='hidden duration-700 ease-in-out' data-carousel-item>
 					<div className='flex w-full h-56  md:h-96'>
