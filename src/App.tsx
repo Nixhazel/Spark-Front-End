@@ -5,6 +5,7 @@ import PrivateRoute from "./auth";
 
 import './App.css'
 import Landing from './pages/Landing';
+import MyAccount from './pages/MyAccount';
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
 			<Toaster position='top-center' reverseOrder={false} />
 			<Routes>
 				<Route path='/' element={<Landing />} />
-				{/* <Route path='/login' element={<Login />} /> */}
+				<Route path='/Myaccount' element={<MyAccount />} />
 				{/* <Route path='/signup' element={<Signup />} /> */}
 				{/* 
 				<Route path='/userDashboard' element={<Userdashboard />} />

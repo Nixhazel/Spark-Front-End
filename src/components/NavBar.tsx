@@ -2,16 +2,16 @@ import React from "react";
 
 const NavBar: React.FC = () => {
 	return (
-		<nav className=' z-50 bg-[#774936] border-gray-200 h-20 md:h-24 py-2 md:py-4 text-white'>
+		<nav className=' z-50 bg-[#774936] border-gray-200 h-20 md:h-24 py-1 md:py-4 text-white'>
 			<div className=' relative z-50 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
 				<a
 					href='https://flowbite.com/'
 					className='flex items-center space-x-3 rtl:space-x-reverse'>
-					<img
+					{/* <img
 						src='https://flowbite.com/docs/images/logo.svg'
 						className='h-8'
 						alt='spark Logo'
-					/>
+					/> */}
 					<span className='self-center text-2xl font-semibold whitespace-nowrap '>
 						SPARK HAIR
 					</span>
@@ -117,8 +117,8 @@ const NavBar: React.FC = () => {
 					<ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-[#774936] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 '>
 						<li>
 							<a
-								href='#'
-								className='block py-2 px-3 text-white hover:bg-[#c99983] rounded md:bg-transparent md:text-white md:p-0'
+								href='/'
+								className='block py-2 px-3 text-white hover:bg-[#c99983] rounded md:bg-transparent md:hover:text-[#b97d5f] md:text-white md:p-0'
 								aria-current='page'>
 								Home
 							</a>
@@ -160,23 +160,17 @@ const NavBar: React.FC = () => {
 									className='py-2 text-sm text-gray-700 '
 									aria-labelledby='dropdownLargeButton'>
 									<li>
-										<a
-											href='#'
-											className='block px-4 py-2 hover:bg-gray-100 '>
+										<a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
 											Dashboard
 										</a>
 									</li>
 									<li>
-										<a
-											href='#'
-											className='block px-4 py-2 hover:bg-gray-100 '>
+										<a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
 											Settings
 										</a>
 									</li>
 									<li>
-										<a
-											href='#'
-											className='block px-4 py-2 hover:bg-gray-100 '>
+										<a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
 											Earnings
 										</a>
 									</li>
@@ -200,7 +194,7 @@ const NavBar: React.FC = () => {
 						</li>
 						<li>
 							<a
-								href='#'
+								href='/Myaccount'
 								className='block py-2 px-3 text-white rounded hover:bg-[#c99983] md:hover:bg-transparent md:hover:text-[#b97d5f] md:p-0 '>
 								My account
 							</a>
