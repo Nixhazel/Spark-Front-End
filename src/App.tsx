@@ -8,6 +8,7 @@ import Landing from './pages/Landing';
 import MyAccount from './pages/MyAccount';
 import { useSelector } from 'react-redux';
 import Loading from './components/Loading';
+import ContactUs from './pages/ContactUs';
 
 function App() {
 const { loading } = useSelector((state: any) => state.alerts);
@@ -18,7 +19,7 @@ const { loading } = useSelector((state: any) => state.alerts);
 			<Routes>
 				<Route path='/' element={<Landing />} />
 				<Route path='/Myaccount' element={<MyAccount />} />
-				{/* <Route path='/signup' element={<Signup />} /> */}
+				<Route path='/ContactUs' element={<ContactUs />} />
 				{/* 
 				<Route path='/userDashboard' element={<Userdashboard />} />
 				<Route path='/forgotpassword' element={<Forgetpassword />} />

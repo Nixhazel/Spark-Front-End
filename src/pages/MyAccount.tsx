@@ -9,7 +9,7 @@ const MyAccount: React.FC = () => {
 		<>
 			<NavBar />
 			<section className='bg-[#fef8f8] flex flex-col items-center justify-center w-full '>
-				<h1 className=' font-bold text-[#774936] text-lg md:text-3xl w-[95%] md:w-3/4 px-4 md:px-8  py-5 md:py-10'>
+				<h1 className=' font-bold text-[#774936] text-xl md:text-3xl w-[95%] md:w-3/4 px-4 md:px-8  py-5 md:py-10'>
 					My account
 				</h1>
 				<article className='flex flex-wrap md:flex-nowrap gap-8 justify-between items-start w-[95%] md:w-3/4'>

@@ -201,7 +201,7 @@ const NavBar: React.FC = () => {
 						</li>
 						<li>
 							<a
-								href='#'
+								href='/ContactUs'
 								className='block py-2 px-3 text-white rounded hover:bg-[#c99983] md:hover:bg-transparent md:hover:text-[#b97d5f] md:p-0 '>
 								Contact Us
 							</a>
