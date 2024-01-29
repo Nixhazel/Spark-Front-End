@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ContactUsForm: React.FC = () => {
-  return (
+	return (
 		<article className='flex flex-col w-full justify-center items-center mx-4 md:mx-8 '>
 			<div className='flex flex-col items-center w-full my-4 md:my-9 py-4 md:py-9 px-1 md:px-4 border border-[#d0a795]'>
 				<div className='flex flex-wrap md:gap-5 justify-center w-full'>
@@ -91,6 +91,6 @@ const ContactUsForm: React.FC = () => {
 			</div>
 		</article>
 	);
-}
+};
 
-export default ContactUsForm
+export default ContactUsForm;

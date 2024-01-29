@@ -1,10 +1,10 @@
-import React from 'react'
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
-import ContactUsForm from '../components/contactus/ContactUsForm';
+import React from "react";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import ContactUsForm from "../components/contactus/ContactUsForm";
 
 const ContactUs: React.FC = () => {
-  return (
+	return (
 		<>
 			<NavBar />
 			<section className='bg-[#fef8f8] flex flex-col items-center justify-center w-full '>
@@ -18,6 +18,6 @@ const ContactUs: React.FC = () => {
 			<Footer />
 		</>
 	);
-}
+};
 
-export default ContactUs
+export default ContactUs;

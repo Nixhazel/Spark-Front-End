@@ -1,14 +1,14 @@
-import React from 'react'
-import HairCards from '../HairCards';
-import Reviews from './Reviews';
-import Services from './Services';
-import CategoriesCard from '../CategoriesCard';
+import React from "react";
+import HairCards from "../HairCards";
+import Reviews from "./Reviews";
+import Services from "./Services";
+import CategoriesCard from "../CategoriesCard";
 
 const Products: React.FC = () => {
-  return (
-		<section className='flex flex-col items-center justify-center w-full mt-4 md:mt-10 border border-red-500'>
-			<article className='flex flex-col justify-center w-[95%] md:w-3/4 border border-green-500'>
-				<div className='flex justify-between items-center w-full mb-4 md:mb-8 border border-black'>
+	return (
+		<section className='flex flex-col items-center justify-center w-full pt-4 md:pt-10 bg-[#fef8f8] '>
+			<article className='flex flex-col justify-center w-[95%] md:w-3/4 '>
+				<div className='flex justify-between items-center w-full mb-4 md:mb-8 '>
 					<p className=' text-[#774936] text-lg font-bold text-center'>
 						FEATURED CATEGORIES
 					</p>
@@ -26,7 +26,7 @@ const Products: React.FC = () => {
 				</div>
 			</article>
 			<article className='flex flex-col justify-center w-[95%] md:w-3/4 border border-green-500'>
-				<div className='flex justify-between items-center w-full mb-4 md:mb-8 border border-black'>
+				<div className='flex justify-between items-center w-full mb-4 md:mb-8'>
 					<p className=' text-[#774936] text-lg font-bold text-center'>
 						FEATURED PRODUCT
 					</p>
@@ -49,6 +49,6 @@ const Products: React.FC = () => {
 			<Services />
 		</section>
 	);
-}
+};
 
-export default Products
+export default Products;

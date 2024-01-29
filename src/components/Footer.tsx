@@ -22,10 +22,10 @@ const Footer: React.FC = () => {
 				</p>
 			</div>
 			<div className='flex flex-col gap-3 items-start'>
-				<a href='' className='m-0 p-0 text-lg font-semibold text-white'>
+				<a href='/Shop' className='m-0 p-0 text-xl font-extrabold text-white'>
 					SHOP
 				</a>
-				<a href='' className='m-0 p-0 text-lg font-semibold text-white'>
+				<a href='/Shop' className='m-0 p-0 text-lg font-semibold text-white'>
 					Product
 				</a>
 				<a href='' className='m-0 p-0 text-lg font-semibold text-white'>
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
 				</a>
 			</div>
 			<div className='flex flex-col gap-3 items-start'>
-				<a href='' className='m-0 p-0 text-lg font-semibold text-white'>
+				<a href='' className='m-0 p-0 text-xl font-extrabold text-white'>
 					Information
 				</a>
 				<a

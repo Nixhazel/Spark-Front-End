@@ -125,7 +125,7 @@ const NavBar: React.FC = () => {
 						</li>
 						<li>
 							<a
-								href='#'
+								href='/Shop'
 								className='block py-2 px-3 text-white rounded hover:bg-[#c99983] md:hover:bg-transparent md:hover:text-[#b97d5f] md:p-0 '>
 								Shop
 							</a>
@@ -155,22 +155,22 @@ const NavBar: React.FC = () => {
 							{/* Dropdown menu */}
 							<div
 								id='dropdownNavbar'
-								className='z-10 hidden font-normal bg-red-500 divide-y divide-gray-100 rounded-lg shadow w-44 '>
+								className='z-10 hidden font-normal bg-[#fef8f8] divide-y divide-gray-100 rounded-lg shadow w-44 '>
 								<ul
 									className='py-2 text-sm text-gray-700 '
 									aria-labelledby='dropdownLargeButton'>
 									<li>
-										<a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
+										<a href='#' className='block px-4 py-2 hover:bg-gray-100 text-[#774936]'>
 											Dashboard
 										</a>
 									</li>
 									<li>
-										<a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
+										<a href='#' className='block px-4 py-2 hover:bg-gray-100 text-[#774936]'>
 											Settings
 										</a>
 									</li>
 									<li>
-										<a href='#' className='block px-4 py-2 hover:bg-gray-100 '>
+										<a href='#' className='block px-4 py-2 hover:bg-gray-100 text-[#774936]'>
 											Earnings
 										</a>
 									</li>
@@ -178,7 +178,7 @@ const NavBar: React.FC = () => {
 								<div className='py-1'>
 									<a
 										href='#'
-										className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 '>
+										className='block px-4 py-2 text-sm hover:bg-gray-100 text-[#774936]'>
 										Sign out
 									</a>
 								</div>

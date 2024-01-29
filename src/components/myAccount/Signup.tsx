@@ -35,8 +35,7 @@ const Signup: React.FC = () => {
 			<h2 className='w-full font-bold text-[#774936] text-lg md:text-3xl text-left'>
 				Register
 			</h2>
-         <div className='w-full my-4 md:my-9 py-6 md:py-12 px-2 md:px-4 border border-[#d0a795]'>
-            
+			<div className='w-full my-4 md:my-9 py-6 md:py-12 px-2 md:px-4 border border-[#d0a795]'>
 				<div className=' mb-8'>
 					<label
 						htmlFor='default-input'
@@ -59,7 +58,7 @@ const Signup: React.FC = () => {
 					</label>
 					<input
 						type='number'
-                  name='phone'
+						name='phone'
 						onChange={updateSignUpData}
 						id='default-input'
 						className='  border border-[#d0a795] text-[#774936] text-sm rounded-lg focus:ring-[#774936] focus:border-[#774936] block w-full p-2.5 '
