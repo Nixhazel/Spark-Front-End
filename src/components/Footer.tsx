@@ -14,12 +14,16 @@ const Footer: React.FC = () => {
 				<p className='p-0 m-0 text-white text-lg font-semibold'>
 					Warri, Nigeria.
 				</p>
-				<p className='p-0 m-0 text-white text-lg font-semibold'>
+				<a
+					href='https://api.whatsapp.com/send?phone=+2347030763737&text=Hello, more information!'
+					className='p-0 m-0 text-white text-lg font-semibold'>
 					Phone: +234 7030763737
-				</p>
-				<p className='p-0 m-0 text-white text-lg font-semibold'>
+				</a>
+				<a
+					href='mailto:cynthiapoweide@gmail.com'
+					className='p-0 m-0 text-white text-lg font-semibold'>
 					Email: cynthiapoweide@gmail.com
-				</p>
+				</a>
 			</div>
 			<div className='flex flex-col gap-3 items-start'>
 				<a href='/Shop' className='m-0 p-0 text-xl font-extrabold text-white'>
