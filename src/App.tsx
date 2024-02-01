@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 import Loading from './components/Loading';
 import ContactUs from './pages/ContactUs';
 import Shop from './pages/Shop';
+import CheckOut from './pages/CheckOut';
 
 function App() {
 const { loading } = useSelector((state: any) => state.alerts);
@@ -22,12 +23,13 @@ const { loading } = useSelector((state: any) => state.alerts);
 				<Route path='/Myaccount' element={<MyAccount />} />
 				<Route path='/ContactUs' element={<ContactUs />} />
 				<Route path='/Shop' element={<Shop />} />
-				{/* 
-				<Route path='/userDashboard' element={<Userdashboard />} />
-				<Route path='/forgotpassword' element={<Forgetpassword />} />
+				<Route path='/CheckOut' element={<CheckOut />} />
 
-				<Route path='/admin/registerdriver' element={<PrivateRoute />}>
-					<Route path='/admin/registerdriver' element={<Registerdriver />} />
+				{/* <Route path='/userDashboard' element={<Userdashboard />} />
+				<Route path='/forgotpassword' element={<Forgetpassword />} /> */}
+
+				{/* <Route path='/CheckOut' element={<PrivateRoute />}>
+					<Route path='/CheckOut' element={<CheckOut />} />
 				</Route> */}
 			</Routes>
 		</>

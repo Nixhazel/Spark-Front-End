@@ -32,7 +32,9 @@ const Footer: React.FC = () => {
 				<a href='/Shop' className='m-0 p-0 text-lg font-semibold text-white'>
 					Product
 				</a>
-				<a href='' className='m-0 p-0 text-lg font-semibold text-white'>
+				<a
+					href='/CheckOut'
+					className='m-0 p-0 text-lg font-semibold text-white'>
 					Checkout
 				</a>
 				<a

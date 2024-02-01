@@ -160,17 +160,23 @@ const NavBar: React.FC = () => {
 									className='py-2 text-sm text-gray-700 '
 									aria-labelledby='dropdownLargeButton'>
 									<li>
-										<a href='#' className='block px-4 py-2 hover:bg-gray-100 text-[#774936]'>
+										<a
+											href='#'
+											className='block px-4 py-2 hover:bg-gray-100 text-[#774936]'>
 											Dashboard
 										</a>
 									</li>
 									<li>
-										<a href='#' className='block px-4 py-2 hover:bg-gray-100 text-[#774936]'>
+										<a
+											href='#'
+											className='block px-4 py-2 hover:bg-gray-100 text-[#774936]'>
 											Settings
 										</a>
 									</li>
 									<li>
-										<a href='#' className='block px-4 py-2 hover:bg-gray-100 text-[#774936]'>
+										<a
+											href='#'
+											className='block px-4 py-2 hover:bg-gray-100 text-[#774936]'>
 											Earnings
 										</a>
 									</li>
@@ -187,7 +193,7 @@ const NavBar: React.FC = () => {
 
 						<li>
 							<a
-								href='#'
+								href='/CheckOut'
 								className='block py-2 px-3 text-white rounded hover:bg-[#c99983] md:hover:bg-transparent md:hover:text-[#b97d5f] md:p-0 '>
 								Checkout
 							</a>

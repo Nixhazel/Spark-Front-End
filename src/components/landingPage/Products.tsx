@@ -25,7 +25,7 @@ const Products: React.FC = () => {
 					<CategoriesCard />
 				</div>
 			</article>
-			<article className='flex flex-col justify-center w-[95%] md:w-3/4 border border-green-500'>
+			<article className='flex flex-col justify-center w-[95%] md:w-3/4'>
 				<div className='flex justify-between items-center w-full mb-4 md:mb-8'>
 					<p className=' text-[#774936] text-lg font-bold text-center'>
 						FEATURED PRODUCT
