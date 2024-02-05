@@ -4,7 +4,7 @@ import { alertsSlice, userSlice } from "./slice";
 
 const rootReducer = combineReducers({
 	alerts: alertsSlice.reducer,
-	userData: userSlice.reducer
+	customer: userSlice.reducer
 });
 
 const store = configureStore({

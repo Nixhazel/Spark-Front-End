@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import EmptyCart from '../components/checkout/EmptyCart';
 
 const CheckOut: React.FC = () => {
+   const [isEmpty, setIsEmpty] = useState(true)
   return (
 		<>
 			<NavBar />
@@ -12,7 +13,7 @@ const CheckOut: React.FC = () => {
 					Your Cart
 				</h1>
            <article className='flex justify-center items-center w-[95%] md:w-3/4 '>
-              <EmptyCart/>
+             {isEmpty && <EmptyCart/>}
             </article>
 			</section>
 			<Footer />

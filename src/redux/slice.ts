@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Customer } from '../@types/models';
 
 export const alertsSlice = createSlice({
 	name: "alerts",
@@ -14,17 +15,25 @@ export const alertsSlice = createSlice({
 		}
 	}
 });
+
+export type CustomerState = Partial<Customer>;
+
+const initialState: CustomerState = {};
 export const userSlice = createSlice({
-	name: "userData",
-	initialState: {
-		userInfo: {}
-	},
+	name: "customer",
+	initialState,
 	reducers: {
-		user: (state, actions) => {
-			state.userInfo = actions.payload;
+		addCustomer: (_, action: PayloadAction<Customer>) => {
+			return action.payload as Customer;
+		},
+		modifyCustomer: (state, action: PayloadAction<Partial<Customer>>) => {
+			return { ...state, ...action.payload };
+		},
+		resetCustomer: () => {
+			return {};
 		}
 	}
 });
 
 export const { showLoading, hideLoading } = alertsSlice.actions;
-export const { user } = userSlice.actions;
+export const { addCustomer, modifyCustomer, resetCustomer } = userSlice.actions;

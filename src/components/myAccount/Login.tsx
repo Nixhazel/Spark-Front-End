@@ -3,12 +3,19 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
-import { showLoading } from "../../redux/slice";
+import { hideLoading, modifyCustomer, showLoading } from "../../redux/slice";
+import { login } from "../../api/auth";
+import { AxiosError } from "axios";
+
+type LoginForm = { email: string; password: string };
 
 const Login: React.FC = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
-	const [loginData, setLoginData] = useState({});
+	const [loginData, setLoginData] = useState<LoginForm>({
+		email: "",
+		password: ""
+	});
 	const [lengthValidated, setLengthValidated] = useState(true);
 	// dispatch(showLoading());
 	// toast.success('data.message');
@@ -26,6 +33,43 @@ const Login: React.FC = () => {
 			...loginData,
 			[e.target.name]: e.target.value
 		});
+	};
+
+	const handleSubmit = async (e: any) => {
+		e.preventDefault();
+		try {
+			dispatch(showLoading());
+			const response = await login(loginData);
+			dispatch(hideLoading());
+
+			if (!response.success) {
+				console.debug("🔐 Error logging in", JSON.stringify(response, null, 2));
+
+				toast.error(response.message);
+				return;
+			}
+			if (response.data.customer) {
+				toast.success("Login Successfull");
+				dispatch(modifyCustomer(response.data.customer));
+
+				if (response.data.user.isAdmin) {
+					navigate("/admin");
+				} else {
+					navigate("/passengerDashboard");
+				}
+				return;
+			}
+		} catch (error) {
+			console.log("🔐 Error logging in", error);
+			const detailedError = (error as AxiosError | any)?.response?.data
+				?.message;
+
+			console.log("❌ Detailed Error logging in ", detailedError);
+			const message =
+				detailedError || "Error logging in. Please try again later";
+			dispatch(hideLoading());
+			toast.error(message);
+		}
 	};
 
 	return (
@@ -70,6 +114,7 @@ const Login: React.FC = () => {
 				</div>
 				<button
 					type='button'
+					onClick={handleSubmit}
 					className='text-white md:text-lg  h-10 md:h-12 bg-[#774936] focus:bg-[#d0a795] font-medium px-10 me-1 mb-2  focus:outline-none '>
 					LOGIN
 				</button>

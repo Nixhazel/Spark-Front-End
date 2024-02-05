@@ -3,8 +3,10 @@ import HairCards from "../HairCards";
 import Reviews from "./Reviews";
 import Services from "./Services";
 import CategoriesCard from "../CategoriesCard";
+import { useNavigate } from 'react-router-dom';
 
 const Products: React.FC = () => {
+	const navigate = useNavigate();
 	return (
 		<section className='flex flex-col items-center justify-center w-full pt-4 md:pt-10 bg-[#fef8f8] '>
 			<article className='flex flex-col justify-center w-[95%] md:w-3/4 '>
@@ -14,6 +16,7 @@ const Products: React.FC = () => {
 					</p>
 					<button
 						type='button'
+						onClick={() => navigate("/shop")}
 						className='text-white bg-[#774936] font-medium w-2/5 md:w-44 text-base px-5 py-2  '>
 						VIEW SHOP
 					</button>
@@ -32,6 +35,7 @@ const Products: React.FC = () => {
 					</p>
 					<button
 						type='button'
+						onClick={() => navigate("/shop")}
 						className='text-white bg-[#774936] font-medium w-2/5 md:w-44 text-base px-5 py-2  '>
 						SEE MORE
 					</button>
