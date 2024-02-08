@@ -1,11 +1,22 @@
+import { AxiosError } from "axios";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { hideLoading, modifyCustomer, showLoading } from "../../redux/slice";
+import toast from "react-hot-toast";
+import { StorageKey, setItem } from "../../utils/storage";
+import { registerUser } from "../../api/auth";
+
+type SignUpForm = { email: string; password: string; phone: string };
 
 const Signup: React.FC = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
-	const [signupData, setSignupData] = useState({});
+	const [signupData, setSignupData] = useState<SignUpForm>({
+		email: "",
+		password: "",
+		phone: ""
+	});
 	const [lengthValidated, setLengthValidated] = useState(true);
 	// const [numberValidated, setNumberValidated] = useState(true);
 
@@ -30,6 +41,58 @@ const Signup: React.FC = () => {
 			[e.target.name]: e.target.value
 		});
 	};
+
+	const handleSubmit = async (e: any) => {
+		e.preventDefault();
+		try {
+			dispatch(showLoading());
+			const response = await registerUser(signupData);
+			dispatch(hideLoading());
+
+			if (!response.success) {
+				console.log("🔐 Error signup in", JSON.stringify(response, null, 2));
+
+				toast.error(response.message);
+				return;
+			}
+			if (response.data.customer) {
+				const id = response.data.customer.token;
+
+				if (id) {
+					await setItem(StorageKey.AUTH_TOKEN, id);
+				} else {
+					console.log("🔐 You are not authorised Invalid TOKEN", id);
+					return {
+						success: false,
+						message: "🔐 You are not authorised Invalid TOKEN"
+					};
+				}
+				toast.success("Signup Successfull");
+				dispatch(modifyCustomer(response.data.customer.user));
+
+				if (response.data.customer.user.isAdmin) {
+					// navigate("/admin");
+				} else {
+					// navigate("/home");
+				}
+				return;
+			}
+		} catch (error) {
+			console.log(
+				"🔐 Error Creating Account",
+				JSON.stringify((error as AxiosError)?.response?.data, null, 2)
+			);
+
+			const detailedError = JSON.stringify(
+				(error as AxiosError | any)?.response?.data?.message
+			);
+			const message =
+				detailedError || "Error Creating Account. Please try again";
+			dispatch(hideLoading());
+			toast.error(message);
+		}
+	};
+
 	return (
 		<article className='flex flex-col w-full  justify-center items-center mx-4 md:mx-8 '>
 			<h2 className='w-full font-bold text-[#774936] text-lg md:text-3xl text-left'>
@@ -57,7 +120,7 @@ const Signup: React.FC = () => {
 						Whats app number
 					</label>
 					<input
-						type='number'
+						type='text'
 						name='phone'
 						onChange={updateSignUpData}
 						id='default-input'
@@ -99,6 +162,7 @@ const Signup: React.FC = () => {
 
 				<button
 					type='button'
+					onClick={handleSubmit}
 					className='text-white md:text-lg  h-10 md:h-12 bg-[#774936] focus:bg-[#d0a795] font-medium px-10 me-1 mb-2  focus:outline-none '>
 					REGISTER
 				</button>

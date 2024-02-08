@@ -17,8 +17,6 @@ const Login: React.FC = () => {
 		password: ""
 	});
 	const [lengthValidated, setLengthValidated] = useState(true);
-	// dispatch(showLoading());
-	// toast.success('data.message');
 
 	const updateLoginData = (e: any) => {
 		if (e.target.name === "password") {
@@ -43,7 +41,7 @@ const Login: React.FC = () => {
 			dispatch(hideLoading());
 
 			if (!response.success) {
-				console.debug("🔐 Error logging in", JSON.stringify(response, null, 2));
+				console.log("🔐 Error logging in", JSON.stringify(response, null, 2));
 
 				toast.error(response.message);
 				return;
@@ -52,10 +50,10 @@ const Login: React.FC = () => {
 				toast.success("Login Successfull");
 				dispatch(modifyCustomer(response.data.customer));
 
-				if (response.data.user.isAdmin) {
-					navigate("/admin");
+				if (response.data.customer.isAdmin) {
+					// navigate("/admin");
 				} else {
-					navigate("/passengerDashboard");
+					// navigate("/passengerDashboard");
 				}
 				return;
 			}
