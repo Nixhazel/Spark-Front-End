@@ -11,6 +11,8 @@ import Loading from './components/Loading';
 import ContactUs from './pages/ContactUs';
 import Shop from './pages/Shop';
 import CheckOut from './pages/CheckOut';
+import UploadProducts from './pages/admin/UploadProducts';
+import EditProducts from './pages/admin/EditProducts';
 
 function App() {
 const { loading } = useSelector((state: any) => state.alerts);
@@ -28,6 +30,18 @@ const { loading } = useSelector((state: any) => state.alerts);
 				{/* <Route path='/userDashboard' element={<Userdashboard />} />
 				<Route path='/forgotpassword' element={<Forgetpassword />} /> */}
 
+				{/* <Route path='/admin' element={<PrivateRoute />}>
+					<Route path='/admin' element={<CheckOut />} />
+				</Route> */}
+				{/* <Route path='/admin/upload' element={<PrivateRoute />}> */}
+				<Route path='/admin/upload' element={<UploadProducts />} />
+				{/* </Route> */}
+				{/* <Route path='/admin/upload' element={<PrivateRoute />}> */}
+				<Route path='/admin/edit' element={<EditProducts />} />
+				{/* </Route> */}
+				{/* <Route path='/CheckOut' element={<PrivateRoute />}>
+					<Route path='/CheckOut' element={<CheckOut />} />
+				</Route> */}
 				{/* <Route path='/CheckOut' element={<PrivateRoute />}>
 					<Route path='/CheckOut' element={<CheckOut />} />
 				</Route> */}

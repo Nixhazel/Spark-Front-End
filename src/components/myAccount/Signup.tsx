@@ -2,8 +2,9 @@ import { AxiosError } from "axios";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { hideLoading, modifyCustomer, showLoading } from "../../redux/slice";
 import toast from "react-hot-toast";
+
+import { hideLoading, modifyCustomer, showLoading } from "../../redux/slice";
 import { StorageKey, setItem } from "../../utils/storage";
 import { registerUser } from "../../api/auth";
 
