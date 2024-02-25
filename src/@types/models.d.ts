@@ -7,4 +7,19 @@ export type ServiceResponse<T extends any> =
 			email: string;
 			password: string;
 			phone: string;
-		};
+};
+		
+export type ImageInterface = {
+	image1: string;
+	image2: string;
+	image3: string;
+};
+
+export type ProductInterface = {
+	name: string;
+	category: string;
+	price: number;
+	quantity: number;
+	description: string;
+	images: ImageInterface;
+};

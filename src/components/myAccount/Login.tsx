@@ -51,7 +51,7 @@ const Login: React.FC = () => {
 				dispatch(modifyCustomer(response.data.customer));
 
 				if (response.data.customer.isAdmin) {
-					// navigate("/admin");
+					navigate("/admin/upload");
 				} else {
 					// navigate("/passengerDashboard");
 				}

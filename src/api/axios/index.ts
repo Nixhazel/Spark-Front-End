@@ -67,7 +67,7 @@ export function constructUrl(path: string): string {
 
 export async function createSecureInstance() {
 	const session: any = await getItem(StorageKey.AUTH_TOKEN);
-	console.log("🔐 createSecureInstance", JSON.stringify(session), BASE_URL);
+	// console.log("🔐 createSecureInstance", JSON.stringify(session), BASE_URL);
 	const idToken = session;
 
 	return axios.create({
